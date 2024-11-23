@@ -2,7 +2,9 @@ const { chromium,test,expect } = require('@playwright/test');
 
 test('Check Search functionality', async () => {
 
-    const browser = await chromium.launch( );
+    const browser = await chromium.launch(
+        {headless:false}
+    );
 
     const page = await browser.newPage();
 
